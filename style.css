@@ -21,7 +21,7 @@ body {
 }
 .container {
     width: 100%;
-    max-width: 960px;
+    max-width: 1140px;
     margin: 0 auto;
 }
 section {
@@ -41,15 +41,18 @@ section {
 }
 /* header */
 header {
-    height: 100vh;
+    /* max-height: 100vh; */
     width: 100%;
-    max-width: 1140px;
+    /* max-width: 1260px; */
     margin: 0 auto;
     position: relative;
-} 
+    padding: 0px 40px;
+}
 .navbar {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
 }
 .navbar {
     padding-top: 50px;
@@ -73,11 +76,16 @@ header {
     display: flex;
     text-decoration: none;
 }
+.menu img {
+    max-width: 24px;
+}
+/* hero section */
 .hero-section {
-    /* margin-top: 130px; */
     height: 100%;
     display: flex;
     align-items: center;
+    justify-content: center;
+    gap: 65px;
 }
 .hero-info {
     width: 50%;
@@ -85,44 +93,56 @@ header {
 .hero-title {
     font-weight: 700;
     font-size: 52px;
-    color: var(--text-dark)
+    color: var(--text-dark);
 }
 .hero-details {
     margin: 16px 0;
     font-weight: 600;
     font-size: 16px;
     line-height: 26px;
-    color: var(--text-dark)
+    color: var(--text-dark);
 }
 .btn-hero {
     border-radius: 41px;
 }
 .hero-img {
-    height: 100%;
+    /* height: 75vh; */
     width: 50%;
-    background-image: url("./images/Circle design.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
+    height: fit-content;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.img-hero {
-    width: 95%;
+
+.img-container {
+    background-image: url("./images/Circle design.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    padding: 40px;
+    width: 90%;
+}
+.img-container > img {
+    width: 100%;
 }
 /* partners icon */
+main {
+    margin-top: 100px;
+}
 .partners {
     width: 80%;
-    margin: 100px auto;
+    margin: 0 auto;
     text-align: center;
     border-width: 1px;
     border-style: solid;
     border-image: linear-gradient(90deg, rgba(192, 204, 218, 0.1) 0%, rgba(192, 204, 218, 0.6) 50.38%, rgba(192, 204, 218, 0.1) 100%) 100% 0 100% 0/3px 0 3px 0 stretch;
-    padding: 20px 0;
+    padding: 32px 0;
 }
-.partners-icon img{
-    margin: 0 20px;
+.partners-icon {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 /* Popular Collection */
@@ -242,19 +262,44 @@ footer p {
 
 /* For Small Device */
 @media only screen and (max-width: 688px){
+    header {
+        text-align: center;
+    }
+    .navbar {
+        flex-direction: column;
+    }
+    .menu {
+        margin-top: 15px;
+    }
+    .menu ul {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 8px;
+        justify-content: center;
+    }
+    .menu ul li a {
+        padding: 0 20px;
+    }
+    .hero-section {
+        flex-direction: column-reverse;
+        gap: 50px;
+    }
+    .hero-info, .hero-img {
+        width: 100%;
+    }
     .container, .call-to-action {
-        width: 95%;
+        width: 90%;
     }
     .popular-products, .call-to-action {
         margin-top: 15px;
         grid-template-columns: repeat(1, 1fr);
-        gap: 15px;
+        /* gap: 15px; */
     }
     
     .call-to-action-info {
         order: 1;
         text-align: center;
-        margin-left: -15px;
+        margin: 50px 0 50px -75px ;
     }
     .call-to-action-info > p {
         padding: 0;
@@ -265,6 +310,28 @@ footer p {
 }
 
 @media only screen and (min-width: 689px) and (max-width: 992px){
+    header {
+        width: 90%;
+        text-align: center;
+    }
+    .navbar {
+        flex-direction: column;
+        
+    }
+    .menu {
+        margin-top: 15px;
+    }
+    .hero-section {
+        flex-direction: column-reverse;
+        gap: 50px;
+    }
+    .hero-info, .hero-img {
+        width: 100%;
+        height: 100%;
+    }
+    /* .hero-img > img {
+        width: 100%;
+    } */
     .container, .call-to-action {
         width: 90%;
     }
