@@ -265,6 +265,7 @@ footer p {
 @media only screen and (max-width: 688px){
     header {
         text-align: center;
+        padding: 0px 20px;
     }
     .navbar {
         flex-direction: column;
@@ -290,6 +291,9 @@ footer p {
     }
     .container, .call-to-action {
         width: 90%;
+    }
+    .container {
+        padding: 0;
     }
     .popular-products, .call-to-action {
         margin-top: 15px;
